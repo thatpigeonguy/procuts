@@ -16,23 +16,7 @@
     <script src="https://kit.fontawesome.com/13ff0f7bf5.js" crossorigin="anonymous"></script>
 </head>
 <body class="index">
-    <div class="header">
-        <div class="logo">
-            <img src="/assets/img/procuts-logo.webp" style="cursor: pointer;" onclick="window.location='/'">
-        </div>
-        
-        <div class="navbar">
-            <nav class="navbar-items">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/locations">Locations</a></li>
-                    <li><a href="/gallery/">Gallery</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <div id="header"></div>
 
     <main>
         <div class="hero hero-img-main">
@@ -126,6 +110,8 @@
         <button class="close-btn">×</button>
         <button class="dismiss-btn">×</button>
     </div>
+
+    <div id="footer"></div>
       
       <script>
       // Show coupon after scrolling
@@ -148,13 +134,16 @@
       });
       </script>
 
-    <footer>
-        <div style="display: inline;">
-            <img class="footer-logo" src="/assets/img/procuts-logo.webp">
-            <address>31 Teaticket Hwy #3, Teaticket, MA 02536</address>
-            <p>(508) 540-8288</p>
-            <p>© 2024 Procuts. All rights reserved.</p>
-        </div>
-    </footer>
+    
+
+    <script>
+        async function includeHTML(id, file) {
+            const response = await fetch(file);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+        includeHTML('header', 'header.html');
+        includeHTML('footer', 'footer.html');
+    </script>
 </body>
 </html>
