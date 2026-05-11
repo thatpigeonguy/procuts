@@ -107,6 +107,10 @@ const images = [
   "/assets/img/gallery/IMG_7573.webp",
   "/assets/img/gallery/IMG_7574.webp",
   "/assets/img/gallery/IMG_7575.webp",
+  "/assets/img/gallery/IMG_20260511_142820_01.webp",
+  "/assets/img/gallery/IMG_20260511_142824_01.webp",
+  "/assets/img/gallery/IMG_20260511_142859_01.webp",
+  "/assets/img/gallery/IMG_20260511_142903_01.webp"
 ];
 
 
